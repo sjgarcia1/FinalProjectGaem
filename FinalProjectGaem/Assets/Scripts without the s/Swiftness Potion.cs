@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class HealthPotion : MonoBehaviour
+public class SwiftnessPotion : MonoBehaviour
 {
     
     public bool exists = true;
@@ -12,10 +11,7 @@ public class HealthPotion : MonoBehaviour
     {
         if (exists == false)
         {
-            Destroy (this.gameObject);
+            Destroy(this.gameObject);
         }
     }
-
-
-
 }
