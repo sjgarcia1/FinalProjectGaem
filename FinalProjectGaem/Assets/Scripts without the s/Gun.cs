@@ -6,6 +6,8 @@ public class Gun : MonoBehaviour
 {
     public GameObject Bullet;
     public bool CanShoot = true;
+    public bool supermode = false;
+    public bool start = false;
     void Start()
     {
         
@@ -14,10 +16,23 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && CanShoot == true)
+        if (Input.GetMouseButtonDown(0) && CanShoot == true && supermode == false)
         {
             GameObject BooletInstance = Instantiate(Bullet, transform.position, transform.rotation);
             StartCoroutine(BooletCoolDown());
+        }
+
+        if (Input.GetMouseButtonDown(0) && CanShoot == true && supermode == true)
+        {
+            GameObject BooletInstance = Instantiate(Bullet, transform.position, transform.rotation);
+            
+        }
+
+        if (start == true)
+        {
+            Debug.Log("This is working");
+            StartCoroutine(Supermode());
+            start = false;
         }
     }
 
@@ -26,6 +41,14 @@ public class Gun : MonoBehaviour
         CanShoot = false;
         yield return new WaitForSeconds(1f);
         CanShoot = true;
+    }
+
+    IEnumerator Supermode()
+    {
+        supermode = true;
+        yield return new WaitForSeconds(5f);
+        supermode = false;
+
     }
 
 }

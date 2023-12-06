@@ -11,6 +11,7 @@ public class PC2 : MonoBehaviour
     public float posx;
     public float posz;
     public bool vulnerable = true;
+    public GameObject gun;
 
     void Start()
     {
@@ -77,6 +78,13 @@ public class PC2 : MonoBehaviour
             other.gameObject.GetComponent<SwiftnessPotion>().exists = false;
         }
 
+        if (other.gameObject.tag == "StrengthPotion")
+        {
+            gun.GetComponent<Gun>().start = true;
+            other.gameObject.GetComponent<StrengthPotion>().exists = false;
+           
+        }
+
         if (other.gameObject.tag == "Enemy" && vulnerable == true)
         {
             Debug.Log("you collided with me ree");
@@ -84,7 +92,50 @@ public class PC2 : MonoBehaviour
             StartCoroutine(CanHurt());
             StartCoroutine(Blink());
         }
+        if (other.gameObject.tag == "PEnemy" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 10;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
+        if (other.gameObject.tag == "LittleE" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 10;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
         if (other.gameObject.tag == "Spikes" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 10;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
+        if (other.gameObject.tag == "Pedro" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 10;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
+        if (other.gameObject.tag == "Archer" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 5;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
+        if (other.gameObject.tag == "Arrow" && vulnerable == true)
+        {
+            Debug.Log("you collided with me ree");
+            health = health - 10;
+            StartCoroutine(CanHurt());
+            StartCoroutine(Blink());
+        }
+
+        if (other.gameObject.tag == "Arrow" && vulnerable == true)
         {
             Debug.Log("you collided with me ree");
             health = health - 10;

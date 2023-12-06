@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
-public class ES : MonoBehaviour
+public class Archer : MonoBehaviour
 {
     public float speed;
     private float startingX;
@@ -11,12 +10,14 @@ public class ES : MonoBehaviour
     public GameObject BarrelMan;
     public float posx;
     public float posz;
+    public GameObject Arrow;
     void Start()
     {
         startingX = transform.position.x;
+        StartCoroutine(ArrowSpawn());
     }
 
-  
+
     void Update()
     {
         posx = transform.position.x;
@@ -31,7 +32,7 @@ public class ES : MonoBehaviour
         if (posx <= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.position += Vector3.back* speed * Time.deltaTime;
+            transform.position += Vector3.back * speed * Time.deltaTime;
         }
 
         if (posx >= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
@@ -49,8 +50,18 @@ public class ES : MonoBehaviour
         if (EHP <= 0)
         {
             Destroy(this.gameObject);
+            
         }
+
+        
+        
     }
 
- 
+    IEnumerator ArrowSpawn()
+    {
+        GameObject ArrowInstance = Instantiate(Arrow, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(ArrowSpawn());
+    }
+
 }
