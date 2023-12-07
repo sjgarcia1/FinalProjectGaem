@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public bool CanShoot = true;
     public bool supermode = false;
     public bool start = false;
+    public Animation GunShoot;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class Gun : MonoBehaviour
         {
             GameObject BooletInstance = Instantiate(Bullet, transform.position, transform.rotation);
             StartCoroutine(BooletCoolDown());
+            GunShoot.Play("gunShot");
         }
 
         if (Input.GetMouseButtonDown(0) && CanShoot == true && supermode == true)
