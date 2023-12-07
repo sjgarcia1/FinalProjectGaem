@@ -11,6 +11,9 @@ public class Pedro : MonoBehaviour
     public int REHP = 1;
     private bool movingRight = true;
     public float EnemyValue = 10f;
+    public bool chosebarrelman = false;
+    public bool chosebucketman = false;
+    public bool chosecrateman = false;
     // private int totalScore;
     // Start is called before the first frame update
     void Start()

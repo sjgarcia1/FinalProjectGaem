@@ -120,9 +120,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrelMan: {fileID: 7948465077141169619, guid: 77467eab578a76c4fb1ac64a5d993d28, type: 3}
+  BucketMan: {fileID: 9167709812542736226, guid: cf0f53f13e1833c4e93e82ee98a0b019, type: 3}
+  CrateMan: {fileID: 7164603759925435762, guid: 21a000744c33b984c8d756cbc18a9ba4, type: 3}
   speed: 10
   posx: 0
   posz: 0
+  chosebarrelman: 0
+  chosebucketman: 0
+  chosecrateman: 0
 --- !u!54 &-557235030523549701
 Rigidbody:
   m_ObjectHideFlags: 0
