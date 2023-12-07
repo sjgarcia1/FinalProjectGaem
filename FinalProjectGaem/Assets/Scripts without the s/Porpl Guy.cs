@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
-public class ES : MonoBehaviour
+public class PorplGuy : MonoBehaviour
 {
     public float speed;
     private float startingX;
-    public int EHP = 3;
+    public int EHP = 10;
     public GameObject BarrelMan;
     public float posx;
     public float posz;
@@ -16,7 +15,7 @@ public class ES : MonoBehaviour
         startingX = transform.position.x;
     }
 
-  
+
     void Update()
     {
         posx = transform.position.x;
@@ -31,7 +30,7 @@ public class ES : MonoBehaviour
         if (posx <= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.position += Vector3.back* speed * Time.deltaTime;
+            transform.position += Vector3.back * speed * Time.deltaTime;
         }
 
         if (posx >= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
@@ -51,6 +50,4 @@ public class ES : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
- 
 }

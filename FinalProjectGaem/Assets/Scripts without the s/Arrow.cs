@@ -1,27 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
-public class ES : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
+    public GameObject BarrelMan;
     public float speed;
     private float startingX;
-    public int EHP = 3;
-    public GameObject BarrelMan;
     public float posx;
     public float posz;
-    void Start()
-    {
-        startingX = transform.position.x;
-    }
 
-  
-    void Update()
+    private void Start()
     {
         posx = transform.position.x;
         posz = transform.position.z;
 
+        StartCoroutine(DespawnDelay());
+
+
+        
+    }
+    private void Update()
+    {
         if (posx <= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
@@ -31,7 +32,7 @@ public class ES : MonoBehaviour
         if (posx <= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.position += Vector3.back* speed * Time.deltaTime;
+            transform.position += Vector3.back * speed * Time.deltaTime;
         }
 
         if (posx >= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
@@ -46,11 +47,11 @@ public class ES : MonoBehaviour
             transform.position += Vector3.back * speed * Time.deltaTime;
         }
 
-        if (EHP <= 0)
-        {
-            Destroy(this.gameObject);
-        }
     }
+    IEnumerator DespawnDelay()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(this.gameObject);
 
- 
+    }
 }

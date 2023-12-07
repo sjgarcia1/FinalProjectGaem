@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - HealthPotion
+  - Enemy
+  - Swiftness Potion
+  - SwiftnessPotion
+  - Spikes
+  - Strength Potion
+  - StrengthPotion
+  - PEnemy
+  - Little E
+  - LittleE
+  - Pedro
+  - Archer
+  - Arrow
   layers:
   - Default
   - TransparentFX

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwiftnessPotion : MonoBehaviour
+public class StrengthPotion : MonoBehaviour
 {
-    
     public bool exists = true;
     public GameObject gun;
 
@@ -13,6 +12,7 @@ public class SwiftnessPotion : MonoBehaviour
         if (exists == false)
         {
             Destroy(this.gameObject);
+
         }
     }
 }
