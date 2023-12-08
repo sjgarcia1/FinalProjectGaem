@@ -2919,106 +2919,6 @@ Transform:
   - {fileID: 9127350952792194596}
   m_Father: {fileID: 7978589150068708027}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &6776108805695450709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1464229713767226648}
-  - component: {fileID: 2641846205319681766}
-  - component: {fileID: 8099739357630058240}
-  - component: {fileID: 8774019777766900088}
-  m_Layer: 0
-  m_Name: BucketSword
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1464229713767226648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776108805695450709}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.14485759, y: 0.6772867, z: -0.048091862, w: 0.7197126}
-  m_LocalPosition: {x: -0.10916179, y: 0.26132, z: 0.25619605}
-  m_LocalScale: {x: 0.80078435, y: 0.80078435, z: 0.8007843}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4432674510179144546}
-  m_LocalEulerAnglesHint: {x: 0.21200041, y: 90, z: -0.010549548}
---- !u!33 &2641846205319681766
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776108805695450709}
-  m_Mesh: {fileID: -4246919426362441703, guid: 2c7b0c93fa2421e4ca4b2a917d050e3b, type: 3}
---- !u!23 &8099739357630058240
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776108805695450709}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9cda2d260e75dfc4da4cec27b64f9da8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!111 &8774019777766900088
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776108805695450709}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 112ecc2667a60be4bbe4de84013fe664, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &6827161317294663816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,6 +3560,7 @@ GameObject:
   - component: {fileID: 4432674510179144546}
   - component: {fileID: 250743722535218990}
   - component: {fileID: 5974184211451161311}
+  - component: {fileID: 3490217962147694105}
   m_Layer: 0
   m_Name: RealBucketMan
   m_TagString: Untagged
@@ -3736,6 +3637,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3490217962147694105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328302206595908866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb04073cf9a943f4db78574f0f80df99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  health: 100
+  maxhealth: 100
+  posx: 0
+  posz: 0
+  vulnerable: 1
+  gun: {fileID: 0}
 --- !u!1 &8358167906679085924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,3 +4185,65 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &871058922186239356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4432674510179144546}
+    m_Modifications:
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.10916179
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25619605
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7197126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14485759
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6772867
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.048091862
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.21200041
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.010549548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917462141459743529, guid: 486383aca441724488028520345d11c2, type: 3}
+      propertyPath: m_Name
+      value: BucketSword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 486383aca441724488028520345d11c2, type: 3}
+--- !u!4 &1464229713767226648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1749475089783631972, guid: 486383aca441724488028520345d11c2, type: 3}
+  m_PrefabInstance: {fileID: 871058922186239356}
+  m_PrefabAsset: {fileID: 0}

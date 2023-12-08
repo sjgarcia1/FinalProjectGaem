@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8709562297312007309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6964, y: 0.4225, z: 1.0682}
-  m_LocalScale: {x: 0.34078372, y: 0.36268792, z: 0.33539426}
+  m_LocalPosition: {x: -0.819, y: 0.5189, z: 0.4728}
+  m_LocalScale: {x: 1.6001351, y: 1.5162466, z: 1.5256233}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  buff: 0

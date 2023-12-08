@@ -24,10 +24,10 @@ public class Gun : MonoBehaviour
             GunShoot.Play("gunShot");
         }
 
-        if (Input.GetMouseButtonDown(0) && CanShoot == true && supermode == true)
+        if (Input.GetMouseButton(0) && CanShoot == true && supermode == true)
         {
             GameObject BooletInstance = Instantiate(Bullet, transform.position, transform.rotation);
-            
+            StartCoroutine(ShorterCoolDown());
         }
 
         if (start == true)
@@ -42,6 +42,13 @@ public class Gun : MonoBehaviour
     {
         CanShoot = false;
         yield return new WaitForSeconds(1f);
+        CanShoot = true;
+    }
+
+    IEnumerator ShorterCoolDown()
+    {
+        CanShoot = false;
+        yield return new WaitForSeconds(0.1f);
         CanShoot = true;
     }
 
