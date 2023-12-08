@@ -9,10 +9,15 @@ public class StrengthPotion1 : MonoBehaviour
 
     private void Update()
     {
+        if (gun == null)
+        {
+            gun = GameObject.FindFirstObjectByType<Gun>().gameObject;
+        } 
+
         if (exists == false)
         {
             Destroy(this.gameObject);
-            GetComponent<Gun>().start = true;
+            gun.GetComponent<Gun>().start = true;
         }
     }
 }
