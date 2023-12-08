@@ -6,10 +6,15 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public GameObject BarrelMan;
+    public GameObject BucketMan;
+    public GameObject CrateMan;
     public float speed;
     private float startingX;
     public float posx;
     public float posz;
+    public bool chosebarrelman = false;
+    public bool chosebucketman = false;
+    public bool chosecrateman = false;
 
     private void Start()
     {
@@ -23,28 +28,85 @@ public class Arrow : MonoBehaviour
     }
     private void Update()
     {
-        if (posx <= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
+        if (chosebarrelman == true)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+            if (posx <= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (posx <= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
+
+            if (posx >= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (posx >= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
         }
 
-        if (posx <= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
+        if (chosebucketman == true)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            if (posx <= BucketMan.GetComponent<PC2>().posx && posz <= BucketMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (posx <= BucketMan.GetComponent<PC2>().posx && posz >= BucketMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
+
+            if (posx >= BucketMan.GetComponent<PC2>().posx && posz <= BucketMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (posx >= BucketMan.GetComponent<PC2>().posx && posz >= BucketMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
         }
 
-        if (posx >= BarrelMan.GetComponent<PC2>().posx && posz <= BarrelMan.GetComponent<PC2>().posz)
+        if (chosecrateman == true)
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            transform.position += Vector3.forward * speed * Time.deltaTime;
-        }
+            if (posx <= CrateMan.GetComponent<PC2>().posx && posz <= CrateMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
 
-        if (posx >= BarrelMan.GetComponent<PC2>().posx && posz >= BarrelMan.GetComponent<PC2>().posz)
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            if (posx <= CrateMan.GetComponent<PC2>().posx && posz >= CrateMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
+
+            if (posx >= CrateMan.GetComponent<PC2>().posx && posz <= CrateMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (posx >= CrateMan.GetComponent<PC2>().posx && posz >= CrateMan.GetComponent<PC2>().posz)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
         }
 
     }
