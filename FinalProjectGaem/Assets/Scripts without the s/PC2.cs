@@ -168,7 +168,12 @@ public class PC2 : MonoBehaviour
             posy = 0;
         }
 
-        IEnumerator CanHurt()
+        if (other.gameObject.tag == "lastLantern")
+        {
+            SceneManager.LoadScene(3);
+        }
+
+            IEnumerator CanHurt()
         {
             vulnerable = false;
             yield return new WaitForSeconds(1f);
