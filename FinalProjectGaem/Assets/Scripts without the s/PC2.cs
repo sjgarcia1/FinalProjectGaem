@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
+using UnityEngine.SceneManagement;
 
 public class PC2 : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class PC2 : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("You got dead");
+            SceneManager.LoadScene(2);
         }
     }
 
