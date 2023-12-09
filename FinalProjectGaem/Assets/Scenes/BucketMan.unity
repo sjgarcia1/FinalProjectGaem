@@ -832,8 +832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrelMan: {fileID: 607150966826065657, guid: f801b66cc5ee9304e98a99879932281f, type: 3}
-  BucketMan: {fileID: 9167709812542736226, guid: cf0f53f13e1833c4e93e82ee98a0b019, type: 3}
-  CrateMan: {fileID: 7164603759925435762, guid: 21a000744c33b984c8d756cbc18a9ba4, type: 3}
+  BucketMan: {fileID: 6878173741862897185, guid: a7628d0d7e828ec4a9db1b6a7ce561c6, type: 3}
+  CrateMan: {fileID: 5137351922612161640, guid: 28b366045a796b8408a281e61d493455, type: 3}
   PorpleGuy: {fileID: 1950207611}
   Pedro: {fileID: 382179265}
   Arrow: {fileID: 7130186812746366008, guid: 912802bdd5c62fd4685713f7e0c996a3, type: 3}

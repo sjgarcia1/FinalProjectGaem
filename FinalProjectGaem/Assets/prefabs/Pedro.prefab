@@ -149,5 +149,8 @@ MonoBehaviour:
   travelDistanceRight: 5
   travelDistanceLeft: -5
   speed: 10
-  REHP: 1
+  REHP: 2
   EnemyValue: 10
+  chosebarrelman: 1
+  chosebucketman: 1
+  chosecrateman: 1

@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 796675a2eb78730459e651917566952d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 796675a2eb78730459e651917566952d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 796675a2eb78730459e651917566952d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 796675a2eb78730459e651917566952d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,5 +71,59 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 796675a2eb78730459e651917566952d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3884377229738019389}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 796675a2eb78730459e651917566952d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4874382700545865645}
   m_SourcePrefab: {fileID: 100100000, guid: 796675a2eb78730459e651917566952d, type: 3}
+--- !u!1 &5308677755069064158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 796675a2eb78730459e651917566952d, type: 3}
+  m_PrefabInstance: {fileID: 5002759881709969039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3884377229738019389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308677755069064158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78106afdc859bf4396affef421d59ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  EHP: 10
+  BarrelMan: {fileID: 2538128933062076554, guid: 989df3902fcd3f7428cb476b909456bb, type: 3}
+  BucketMan: {fileID: 6878173741862897185, guid: a7628d0d7e828ec4a9db1b6a7ce561c6, type: 3}
+  CrateMan: {fileID: 5137351922612161640, guid: 28b366045a796b8408a281e61d493455, type: 3}
+  posx: 0
+  posz: 0
+  chosebarrelman: 0
+  chosebucketman: 0
+  chosecrateman: 0
+--- !u!65 &4874382700545865645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308677755069064158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1894183, y: 2.38638, z: 1.1843338}
+  m_Center: {x: 0.024207234, y: -1.0187205, z: -0.00000035762787}

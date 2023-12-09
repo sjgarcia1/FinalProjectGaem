@@ -120,10 +120,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9
-  EHP: 1
+  EHP: 2
   BarrelMan: {fileID: 0}
+  BucketMan: {fileID: 0}
+  CrateMan: {fileID: 0}
   posx: 0
   posz: 0
+  chosebarrelman: 1
+  chosebucketman: 1
+  chosecrateman: 1
 --- !u!54 &995563261425266468
 Rigidbody:
   m_ObjectHideFlags: 0

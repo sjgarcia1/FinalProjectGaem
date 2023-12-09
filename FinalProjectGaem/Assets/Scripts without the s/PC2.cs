@@ -12,9 +12,11 @@ public class PC2 : MonoBehaviour
     public float posz;
     public bool vulnerable = true;
     public GameObject gun;
+    public bool stun = false;
 
     void Start()
     {
+
     }
 
 
@@ -24,38 +26,43 @@ public class PC2 : MonoBehaviour
         posx = transform.position.x;
         posz = transform.position.z;
 
+        
+        
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+            }
+
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                Debug.Log("rightClick");
+                transform.Rotate(Vector3.up * 90);
+               
+
+            }
+        
+       
         if (health >= maxhealth)
         {
             health = maxhealth;
         }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.back * speed * Time.deltaTime;
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("rightClick");
-            transform.Rotate(Vector3.up * 90);
-
-
-        }
+      
 
         if (health <= 0)
         {
@@ -80,8 +87,8 @@ public class PC2 : MonoBehaviour
 
         if (other.gameObject.tag == "StrengthPotion")
         {
-            gun.GetComponent<Gun>().start = true;
-            other.gameObject.GetComponent<StrengthPotion>().exists = false;
+            //gun.GetComponent<Gun>().start = true;
+            other.gameObject.GetComponent<StrengthPotion1>().exists = false;
            
         }
 

@@ -13,6 +13,7 @@ public class CYC : MonoBehaviour
     public GameObject LittleE;
     public GameObject Enemy;
     public GameObject Archer;
+    public GameObject SP;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class CYC : MonoBehaviour
             LittleE.GetComponent<LittleE>().chosebarrelman = true;
             Enemy.GetComponent<ES>().chosebarrelman = true;
             Archer.GetComponent<Archer>().chosebarrelman = true;
+            SP.GetComponent<StrengthPotion1>().chosebarrelman = true;
             Destroy(this.gameObject);
         }
 
@@ -43,6 +45,7 @@ public class CYC : MonoBehaviour
             LittleE.GetComponent<LittleE>().chosebucketman = true;
             Enemy.GetComponent<ES>().chosebucketman = true;
             Archer.GetComponent<Archer>().chosebucketman = true;
+            SP.GetComponent<StrengthPotion1>().chosebucketman = true;
             Destroy(this.gameObject);
         }
 
@@ -55,6 +58,7 @@ public class CYC : MonoBehaviour
             LittleE.GetComponent<LittleE>().chosecrateman = true;
             Enemy.GetComponent<ES>().chosecrateman = true;
             Archer.GetComponent<Archer>().chosecrateman = true;
+            SP.GetComponent<StrengthPotion1>().chosecrateman = true;
             Destroy(this.gameObject);
         }
     }

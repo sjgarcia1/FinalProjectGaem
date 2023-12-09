@@ -1396,7 +1396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c1f5b91b0cf99c40868e67317949f28, type: 2}
+  - {fileID: 2100000, guid: 518ee2de8836bde488ff0043e4d0cf5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3655,7 +3655,7 @@ MonoBehaviour:
   posx: 0
   posz: 0
   vulnerable: 1
-  gun: {fileID: 0}
+  gun: {fileID: 5917462141459743529, guid: 486383aca441724488028520345d11c2, type: 3}
 --- !u!1 &8358167906679085924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,7 +3718,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c1f5b91b0cf99c40868e67317949f28, type: 2}
+  - {fileID: 2100000, guid: 518ee2de8836bde488ff0043e4d0cf5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
