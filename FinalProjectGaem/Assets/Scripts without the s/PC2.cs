@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 using UnityEngine.SceneManagement;
+using UnityEditor.Experimental.GraphView;
 
 public class PC2 : MonoBehaviour
 {
@@ -11,13 +12,19 @@ public class PC2 : MonoBehaviour
     public int maxhealth = 100;
     public float posx;
     public float posz;
+    public float posy;
     public bool vulnerable = true;
     public GameObject gun;
     public bool stun = false;
+    private Rigidbody rigidbodyRef;
+
+    private Rigidbody rigidbpdyRef;
+    private Vector3 startPos;
 
     void Start()
     {
-
+        rigidbodyRef = GetComponent<Rigidbody>();
+        startPos = transform.position;
     }
 
 
@@ -26,10 +33,11 @@ public class PC2 : MonoBehaviour
 
         posx = transform.position.x;
         posz = transform.position.z;
+        posy = transform.position.y;
 
-        
-        
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.position += Vector3.left * speed * Time.deltaTime;
             }
@@ -150,6 +158,14 @@ public class PC2 : MonoBehaviour
             health = health - 10;
             StartCoroutine(CanHurt());
             StartCoroutine(Blink());
+        }
+
+        if (other.gameObject.tag == "portal")
+        {
+            transform.position = other.gameObject.GetComponent<portalScript>().teleportPoint.transform.position;
+            posx = transform.position.x;
+            posz = transform.position.z;
+            posy = 0;
         }
 
         IEnumerator CanHurt()

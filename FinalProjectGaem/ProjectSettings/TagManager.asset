@@ -17,6 +17,7 @@ TagManager:
   - Pedro
   - Archer
   - Arrow
+  - portal
   layers:
   - Default
   - TransparentFX

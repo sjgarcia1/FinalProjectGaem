@@ -15,6 +15,8 @@ public class PorplGuy : MonoBehaviour
     public bool chosebarrelman = false;
     public bool chosebucketman = false;
     public bool chosecrateman = false;
+    public GameObject portal;
+
     void Start()
     {
         startingX = transform.position.x;
@@ -116,6 +118,7 @@ public class PorplGuy : MonoBehaviour
 
         if (EHP <= 0)
         {
+            portal.GetComponent<portalScript>().PortalClosed = false;
             Destroy(this.gameObject);
         }
     }
